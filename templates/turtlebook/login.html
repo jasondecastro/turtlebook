@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>turtlebook</title>
+        <link href="{{ url_for('static', filename='images/favicon.ico') }}" rel="icon" type="image/x-icon" />
+		<meta name="viewport" content="width=1120,user-scalable=no" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet" type="text/css" />
+		
+        <!--[if lte IE 8]><script src="{{ url_for('static', filename='js/html5shiv.js') }}"></script>-->
+		
+        <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/jquery.poptrox.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/config.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/skel.min.js') }}"></script>
+		
+        <noscript>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/skel-noscript.css') }}" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style-desktop.css') }}" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style-noscript.css') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style-glyphs.css') }}" />
+		</noscript>
+        
+		<!--[if lte IE 8]><link rel="stylesheet" href="{{ url_for('static', filename='css/ie8.css') }}" /><![endif]-->
+	
+    </head>
+	<body>
+
+		<div id="wrapper">
+            <div id="topBlackBar">
+                <div id="logoContainer">
+                    <span class="icon-globe"></span>
+                </div>
+            </div>
+            
+			<div id="main">
+				<div id="reel">
+					<div id="header" class="item" data-width="400">
+						<h1>turtlebook</h1>
+						<p>a community where turtle lovers share</p>
+					</div>
+                    
+                    <div id="header" class="item" data-width="230">
+						<h1>login</h1>
+                        <form method="post" action="login">
+                            {{ lform.login_user(placeholder="username") }}
+                            {{ lform.login_pass(placeholder="password") }}
+                            <input type="submit" value="go">
+                        </form>
+					</div>
+				</div>
+			</div>
+		
+			<div id="footer">
+				<div class="left">
+					<p>This is <strong>turtlebook</strong>, a social networking site where turtle lovers discuss and share their photos and thoughts about turtles.</p>
+                    <p> turtlebook originated in <b>new york</b>.
+				</div>
+				<div class="right">
+					<ul class="contact">
+						<li><a href="http://twitter.com" class="fa fa-twitter solo"><span>Twitter</span></a></li>
+						<li><a href="http://facebook.com" class="fa fa-facebook solo"><span>Facebook</span></a></li>
+						<li><a href="http://plus.google.com" class="fa fa-google-plus solo"><span>Google+</span></a></li>
+						<li><a href="http://dribble.com" class="fa fa-dribbble solo"><span>Dribbble</span></a></li>
+						<li><a href="http://pinterest.com" class="fa fa-pinterest solo"><span>Pinterest</span></a></li>
+						<li><a href="#" class="fa fa-envelope solo"><span>Email</span></a></li>
+					</ul>
+					<div id="copyright">
+						&copy; turtlebook | <a href="/info.html">more info..</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</body>
+</html>
